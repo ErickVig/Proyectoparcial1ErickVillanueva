@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+		<title>SOLICITUD DE EMPLEO </title>
+</head>
+
+<div align="Center"> 
+<h1>  <font face="times new roman" size=10 color="blue"> SOLICITUD EMPLEO </h1> </font></div>
+<h2> Ingrese sus datos para aplicar:</h2>
+
+		
+<body>
+<script>
+		function inciar(){
+			nombre1=document.getElementById("nombre");
+			nombre2=document.getElementById("apellido");
+			nombre1.addEventListener("input",validacion, false)
+			nombre2.addEventListener("input",validacion, false)
+			dpi=document.getElementById("cui");
+			validacion();
+					}
+					function validacion(){
+						if (nombre1.value=='' && nombre2.value=='') {
+							nombre1.setCustomValidity("ingrese al menos un nombre")
+							nombre1.style.background='#FFDDDD';
+						}
+							else {
+							nombre1.setCustomValidity('');
+							nombre1.style.background='#FFFFFF';
+						}
+					}
+					window.addEventListener("load", inciar, false);
+				</script>
+				
+					<div align="center">	
+			<section>
+			<form name="registracion" method="post" action="datos.php">
+			Nombre:
+			<input type="text" name="nombre" id="nombre">
+			
+			Apellido:
+			<input type="text" name="apellido" id="apellido">
+			<br>
+			<br>
+			CUI: <input  type="number" name="cui" id="cui" pattern="[0-12]" placeholder="Solo numeros">
+
+			<br>
+			<br>
+
+			Estado Civil: <input type="text" name="estadocivil" id="estadocivil" placeholder="Soltero o Casado" size="15">
+				
+			<br>
+			<br>
+			Fecha de Nacimiento:
+			<input type="date" name="fechan" id="fechan" size="10">
+			<br>
+			<br>
+			Numero de Telefono:
+			<input type="number" name="telefono" id="telefono" pattern="[0-7]" placeholder="Solo se permiten 8 digitos">
+			<br>
+			<br>
+			NIT:
+			<input type="char" name="nit" id="nit" placeholder="Se permiten numeros y letras">
+			<br>
+			<br>
+
+			Genero: <input type="text" name="genero" id="genero" placeholder="Masculino o Femenino" size="20">
+			<br>
+			<br>
+			Correo Electronico: <input type="email" name="correo" id="correo" size="30" maxlength="45" title="Ejemplo: 1234@gmail.com"
+			placeholder="Coloque su Correo Electr�nico">
+			<br>
+			<br>	
+			Cargo que le Interesa: <input type="text" name="cargo" maxlength="25" size="15" placeholder="Cargo Interesado">
+			<br>
+			<br>
+  		 Grado academico alcanzado:<br><br>
+   		<input type="text" name="grado" placeholder="Primaria, Basico etc">
+      		<br>
+		<br>
+		Cuenta con Experiencia? <br>
+		<input type="text" name="experiencia" placeholder="Si, No">
+	
+		
+		
+	<!-- TERMINAAAAA -->
+		<br><br>
+		<input type="submit" id="send" value="ingresar Informacion" size="50">
+		<br>
+		<br>
+		<br>
+		</div>
+	<br>
+		<br>
+
+</form>
+</section>
+</body>
+</html>
